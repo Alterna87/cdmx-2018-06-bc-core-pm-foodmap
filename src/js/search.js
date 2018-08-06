@@ -22,7 +22,7 @@ const initMap =(latitud, longitud) => {
   let center = new google.maps.LatLng(latitud,longitud);
   map = new google.maps.Map(document.getElementById('map'), {
     center: center,
-    zoom: 15
+    zoom: 16
   });
   let request = {
     location: center,
@@ -42,7 +42,7 @@ const callback = (results, status) => {
 }
 const createMarker = (place) => {
 
-
+console.log(place);
   let placeLoc = place.geometry.location;
   let marker = new google.maps.Marker({
     map: map,
@@ -50,16 +50,21 @@ const createMarker = (place) => {
   });
   marker.addListener('click', ()=> {
     let photos;
+    let rating;
     if (place.photos) {
       photos = place.photos[0].getUrl({'maxWidth': 400, 'maxHeight': 200});
-
-
       } else {
         photos = '';
       }
+      if (place.rating) {
+        rating = place.rating;
+      } else {
+        rating = 'Sin evaluar';
+      }
     let name = place.name;
     let photo = photos;
-    modalPlace(name, photo);
+    let address = place.vicinity;
+    modalPlace(name, photo, address, rating);
 
 });
 

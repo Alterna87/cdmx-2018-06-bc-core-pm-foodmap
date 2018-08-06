@@ -1,15 +1,11 @@
-const modalPlace =(name,photo)=> {
+const modalPlace =(name,photo, address, rating)=> {
   swal({
     imageUrl: `${photo}`,
-    imageWidth: 400,
-    imageHeight: 200,
     title: `<strong>${name}</strong>`,
-    html:
-      'You can use <b>bold text</b>, ' +
-      '<a href="//github.com">links</a> ' +
-      'and other HTML tags',
+    html:`<b>Dirección: </b> ${address} <br>` +
+    `<b>Rating:</b> ${rating}`,
     showCloseButton: true,
-    showCancelButton: true,
+    showCancelButton: false,
     focusConfirm: false,
     confirmButtonText:
       '<i class="fa fa-thumbs-up"></i> Great!',
