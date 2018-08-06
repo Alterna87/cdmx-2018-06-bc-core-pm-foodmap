@@ -27,8 +27,7 @@ const initMap =(latitud, longitud) => {
   let request = {
     location: center,
     radius: 500,
-    types: ['restaurant'],
-    minPriceLevel: 0
+    types: ['restaurant']
   };
   let service = new google.maps.places.PlacesService(map);
 service.nearbySearch(request, callback);
@@ -38,34 +37,36 @@ const callback = (results, status) => {
   if(status == google.maps.places.PlacesServiceStatus.OK){
     for (let i = 0; i < results.length; i++) {
       createMarker(results[i]);
-    }
+        }
   }
 }
+
 const createMarker = (place) => {
   let placeLoc = place.geometry.location;
   let marker = new google.maps.Marker({
     map: map,
-    position: place.geometry.location
+    position: placeLoc
   });
-  marker.addListener('click', ()=> {
-    let photos;
-    let rating;
-    if (place.photos) {
-      photos = place.photos[0].getUrl({'maxWidth': 400, 'maxHeight': 200});
-      } else {
-        photos = '';
-      }
-      if (place.rating) {
-        rating = place.rating;
-      } else {
-        rating = 'Sin evaluar';
-      }
-    let name = place.name;
-    let photo = photos;
-    let address = place.vicinity;
-    modalPlace(name, photo, address, rating);
-
+  let photos;
+  let rating;
+  if (place.photos) {
+    photos = place.photos[0].getUrl({'maxWidth': 400, 'maxHeight': 200});
+    } else {
+      photos = '';
+    }
+    if (place.rating) {
+      rating = place.rating;
+    } else {
+      rating = 'Sin evaluar';
+    }
+  let name = place.name;
+  let photo = photos;
+  let address = place.vicinity;
+marker.addListener('click', ()=> {
+modalPlace(name, photo, address, rating);
 });
+
+listPlace(name, photo, address, rating);
 
 
 }

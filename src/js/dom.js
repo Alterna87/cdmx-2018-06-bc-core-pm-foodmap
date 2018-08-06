@@ -11,10 +11,31 @@ const modalPlace =(name,photo, address, rating)=> {
       '<i class="fa fa-thumbs-up"></i> Great!',
     confirmButtonAriaLabel: 'Thumbs up, great!',
   })
+};
 
+const listPlace = (name, photo, address, rating)=> {
+let result = document.getElementById('result');
+let photos;
+if(photo =='') {
+  photos = `<p class = 'orange-text'>${name}</p>`;
+} else {
+  photos = `<img src="${photo}">
+  <span class="card-title">${name}</span>`;
+}
+  result.innerHTML += `<div class="col s12 m7">
+      <div class="card">
+        <div class="card-image">
+        ${photos}
+        </div>
+        <div class="card-content">
+          <p>${address}</p>
+          <p>Ranking: ${rating}</p>
+        </div>
+      </div>
+    </div>`;
 }
 
-
+// Add JQuery for effect selects
 $(document).ready(function(){
   $('select').formSelect();
 });

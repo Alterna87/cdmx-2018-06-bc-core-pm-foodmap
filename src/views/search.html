@@ -14,7 +14,6 @@
     </header>
     <div class="container">
 
-    </div>
     <!--Aqui se muestra el mapa-->
     <div class="row font-text" id="map">
     </div>
@@ -22,12 +21,17 @@
     <div class="input-field col s12 font-text">
     <select class=" font-text">
       <option value="" disabled selected>Filtrar por...</option>
-      <option value="1">Alfabeticamente</option>
-      <option value="2">Por Ranking</option>
-      <option value="3">Abiertos Ahora</option>
-    </select>
+      <option value="1">Mas Cercanos</option>
+      <option value="3">Por Ranking</option>
+      <option value="4">Abiertos Ahora</option>
+      <option value="2">Alfabeticamente</option>
+          </select>
   </div>
+  <!--Se mostrarán los resultados del filtrado-->
+  <section id="result">
+  </section>
     </div>
+      </div>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"> </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUaz17mTrasil6s3EjOP1NkpWqxRooDns&libraries=places"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
