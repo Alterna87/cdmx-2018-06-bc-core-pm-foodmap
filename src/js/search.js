@@ -41,13 +41,28 @@ const callback = (results, status) => {
   }
 }
 const createMarker = (place) => {
+
+
   let placeLoc = place.geometry.location;
   let marker = new google.maps.Marker({
     map: map,
     position: place.geometry.location
   });
   marker.addListener('click', ()=> {
-  alert('Hola')});
+    let photos;
+    if (place.photos) {
+      photos = place.photos[0].getUrl({'maxWidth': 400, 'maxHeight': 200});
+
+
+      } else {
+        photos = '';
+      }
+    let name = place.name;
+    let photo = photos;
+    modalPlace(name, photo);
+
+});
+
 
 }
 
