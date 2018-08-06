@@ -1,15 +1,26 @@
 
+* {
+  margin: 0px;
+  padding: 0px;
+}
 body, main {
-  background-color:#F36415;
+
+}
+
+header {
+  margin: 0px;
+  padding: 0px;
+  background-color: #F36415;
 }
 
 h1 {
   margin-left: 10px;
 }
 
-h2 {
+.titlelogo {
   font-family: 'Lobster', cursive;
-  margin-left: 120px;
+  margin-top: 0px !important;
+  padding: 15px;
 
 }
 .big {
@@ -19,13 +30,24 @@ h2 {
 .responsive-img {
   margin: 30px;
 }
-
 .slogan {
   margin-top: 20px;
 }
+.dropdown-content li>span {
+    color: #F36415 !important;
+}
+.select-wrapper input.select-dropdown {
+    border-bottom: 1px solid #FF9800 !important;
+  }
+  .select-wrapper input.select-dropdown:focus {
+  border-bottom: 1px solid #FF9800 !important;
+}
+
+.font-text {
+  font-family: 'Average', serif;
+}
 
 #map {
-      height: 300px;  /* The height is 400 pixels */
-        /* The width is the width of the web page */
+      height: 300px;
       margin: 5px;
      }

@@ -27,7 +27,8 @@ const initMap =(latitud, longitud) => {
   let request = {
     location: center,
     radius: 500,
-    types: ['restaurant']
+    types: ['restaurant'],
+    minPriceLevel: 0
   };
   let service = new google.maps.places.PlacesService(map);
 service.nearbySearch(request, callback);
@@ -41,8 +42,6 @@ const callback = (results, status) => {
   }
 }
 const createMarker = (place) => {
-
-console.log(place);
   let placeLoc = place.geometry.location;
   let marker = new google.maps.Marker({
     map: map,

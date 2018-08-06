@@ -13,3 +13,8 @@ const modalPlace =(name,photo, address, rating)=> {
   })
 
 }
+
+
+$(document).ready(function(){
+  $('select').formSelect();
+});

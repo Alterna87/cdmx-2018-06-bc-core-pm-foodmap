@@ -3,33 +3,35 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-
     <link rel="stylesheet" href="../css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Average|Ovo|PT+Serif+Caption" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-
     <title>CloseFood - Search</title>
   </head>
   <body>
-    <header><h2>CloseFood</h2>
+    <header><h2 class="titlelogo">CloseFood</h2>
     </header>
-    <!--Aqui se muestra el mapa-->
-    <div id="map">
-    </div>
+    <div class="container">
 
-    <div id="modal1" class="modal">
-    <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>A bunch of text</p>
     </div>
-    <div class="modal-footer">
-      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    <!--Aqui se muestra el mapa-->
+    <div class="row font-text" id="map">
     </div>
+    <div class= "row font-text">
+    <div class="input-field col s12 font-text">
+    <select class=" font-text">
+      <option value="" disabled selected>Filtrar por...</option>
+      <option value="1">Alfabeticamente</option>
+      <option value="2">Por Ranking</option>
+      <option value="3">Abiertos Ahora</option>
+    </select>
   </div>
+    </div>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"> </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUaz17mTrasil6s3EjOP1NkpWqxRooDns&libraries=places"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
     <script type="text/javascript" src="../js/dom.js"></script>
     <script type="text/javascript" src="../js/search.js"></script>
   </body>
