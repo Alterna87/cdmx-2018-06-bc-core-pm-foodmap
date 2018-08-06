@@ -46,6 +46,9 @@ const createMarker = (place) => {
     map: map,
     position: place.geometry.location
   });
+  marker.addListener('click', ()=> {
+  alert('Hola')});
+
 }
 
 findMe();
