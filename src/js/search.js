@@ -25,7 +25,6 @@ const initMap =(latitud, longitud) => {
     zoom: 16
   });
 
-
   let request = {
     location: center,
     radius: 500,
@@ -33,7 +32,7 @@ const initMap =(latitud, longitud) => {
 
   };
   let service = new google.maps.places.PlacesService(map);
-service.nearbySearch(request, callback);
+  service.nearbySearch(request, callback);
 }
 
 const callback = (results, status) => {
@@ -86,6 +85,7 @@ const createMarker = (place) => {
   let name = place.name;
   let photo = photos;
   let address = place.vicinity;
+
 marker.addListener('click', ()=> {
 modalPlace(name, photo, address, rating);
 });

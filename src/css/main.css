@@ -51,7 +51,9 @@ h1 {
 .orange-text {
   color: #F36415;
 }
-
+.bg-orange {
+  background-color: #F36415  
+}
 #map {
       height: 300px;
       margin: 5px;
