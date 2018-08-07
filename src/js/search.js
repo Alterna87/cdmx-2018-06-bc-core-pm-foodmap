@@ -24,10 +24,13 @@ const initMap =(latitud, longitud) => {
     center: center,
     zoom: 16
   });
+
+
   let request = {
     location: center,
     radius: 500,
     types: ['restaurant']
+
   };
   let service = new google.maps.places.PlacesService(map);
 service.nearbySearch(request, callback);
@@ -35,13 +38,34 @@ service.nearbySearch(request, callback);
 
 const callback = (results, status) => {
   if(status == google.maps.places.PlacesServiceStatus.OK){
+    clean();
     for (let i = 0; i < results.length; i++) {
-      createMarker(results[i]);
+      let filter = selectFilter();
+      switch (filter) {
+        case '3':
+          if (results[i].rating > 3) {
+            createMarker(results[i]);
+          }
+          break;
+        case '4':
+        if (results[i].opening_hours) {
+          if (results[i].opening_hours.open_now == true) {
+            createMarker(results[i]);
+          }
+        } else {
+          break
         }
+
+        break;
+        default:
+        createMarker(results[i]);
+        break;
+      }
+    }
   }
 }
-
 const createMarker = (place) => {
+  console.log(place);
   let placeLoc = place.geometry.location;
   let marker = new google.maps.Marker({
     map: map,

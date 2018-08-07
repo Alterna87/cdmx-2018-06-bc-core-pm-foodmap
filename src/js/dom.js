@@ -14,7 +14,7 @@ const modalPlace =(name,photo, address, rating)=> {
 };
 
 const listPlace = (name, photo, address, rating)=> {
-let result = document.getElementById('result');
+result = document.getElementById('result');
 let photos;
 if(photo =='') {
   photos = `<p class = 'orange-text'>${name}</p>`;
@@ -34,6 +34,21 @@ if(photo =='') {
       </div>
     </div>`;
 }
+
+let filter= document.getElementById('filter');
+let result = document.getElementById('result');
+const clean = () => {
+  result.innerHTML ='';
+}
+
+const selectFilter = () => {
+    return filter.value;
+
+}
+
+filter.addEventListener('change', findMe)
+
+
 
 // Add JQuery for effect selects
 $(document).ready(function(){
