@@ -17,10 +17,9 @@ const listPlace = (name, photo, address, rating)=> {
 result = document.getElementById('result');
 let photos;
 if(photo =='') {
-  photos = `<p class = 'orange-text'>${name}</p>`;
+  photos = `<img src="../images/no-disponible.png">`;
 } else {
-  photos = `<img src="${photo}">
-  <span class="card-title">${name}</span>`;
+  photos = `<img src="${photo}">`;
 }
   result.innerHTML += `<div class="col s12 m7">
       <div class="card">
@@ -28,8 +27,9 @@ if(photo =='') {
         ${photos}
         </div>
         <div class="card-content">
+        <span class="card-title orange-textt">${name}</span>
           <p>${address}</p>
-          <p>Ranking: ${rating}</p>
+          <p >Ranking: ${rating}</p>
         </div>
       </div>
     </div>`;

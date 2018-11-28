@@ -1,11 +1,4 @@
 
-* {
-  margin: 0px;
-  padding: 0px;
-}
-body, main {
-
-}
 
 header {
   margin: 0px;
@@ -19,8 +12,9 @@ h1 {
 
 .titlelogo {
   font-family: 'Lobster', cursive;
-  margin-top: 0px !important;
-  padding: 15px;
+  margin-top: 0px;
+  padding: 1px;
+  text-align: center;
 
 }
 .big {
@@ -34,25 +28,26 @@ h1 {
   margin-top: 20px;
 }
 .dropdown-content li>span {
-    color: #F36415 !important;
+    color: #F36415;
 }
 .select-wrapper input.select-dropdown {
-    border-bottom: 1px solid #FF9800 !important;
+    border-bottom: 1px solid #F36415;
   }
   .select-wrapper input.select-dropdown:focus {
-  border-bottom: 1px solid #FF9800 !important;
+  border-bottom: 1px solid #FF9800;
 }
+
 
 .font-text {
 
-  font-family: 'Average', serif;
+  font-family: 'Noto Sans TC', sans-serif;
 }
 
-.orange-text {
+.orange-textt {
   color: #F36415;
 }
 .bg-orange {
-  background-color: #F36415  
+  background-color: #F36415
 }
 #map {
       height: 300px;
