@@ -6,7 +6,7 @@
 
 Estás de viaje de negocios o simplemente de vacaciones, ¿no conoces completamente la ciudad?, ¿Necesitas saber qué restaurantes se encuentran cercanos, precios accesibles y los mejores sabores?, entonces [CloseMap](https://francisvelueta.github.io/cdmx-2018-06-bc-core-pm-foodmap/src/) es para ti,  una aplicación Web donde puedes encontrar restaurantes muy cerca de ti, también puedes filtrar restaurantes específicos, como un ranking mayor a tres puntos, los restaurantes abiertos y por supuesto los más cercanos a ti.
 
-![CloseMap](https://github.com/francisvelueta/cdmx-2018-06-bc-core-pm-foodmap/blob/master/src/images/splash.png)
+![CloseMap](https://github.com/francisvelueta/cdmx-2018-06-bc-core-pm-foodmap/blob/master/src/images/splash2.png)
 
 ----
 ## Recomendaciones de Uso
